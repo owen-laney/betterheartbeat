@@ -7,7 +7,7 @@
 ★ Enhanced UI\
 ★ Fluid animations
 
-## Manual installation
+## Install manually
 ### 1. Download
 1. Click the green code button and select download zip
 2. Unzip the file that downloads\
@@ -35,3 +35,6 @@
 - Extension icon & polish
 - Landing page
 - Example screenshots in this repo
+
+## Install
+We aren't on the Chrome Web Store or Firefox Addons store yet, so please follow the [manual instructionshttps://github.com/owen-laney/betterheartbeat?tab=readme-ov-file#install-manually)
