@@ -21,12 +21,13 @@
       "page": "settings/options.html",
       "open_in_tab":true
     },
+
     "content_scripts": [
       {
         "matches": ["*://*.heartbeat.chat/*"],
         "js": ["betterheartbeat.js"],
         "css": ["betterheartbeat.css"],
-        "run_at": "document_start",
+        "run_at": "document_idle",
         "all_frames": true,
         "match_about_blank": true
       }

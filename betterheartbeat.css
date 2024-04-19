@@ -15,8 +15,8 @@ body {
 }
 
 .jLPXgI {
-    width: inherit;
-    border: none;
+    width: inherit !important;
+    border: none !important;
 }
 
 .sc-fwwElh {
@@ -967,7 +967,6 @@ body {
 
 .sc-bVHCgj > * {
     width: 100%;
-    max-width: 800px;
 }
 
 .rbc-calendar > .sc-ktPPKK {
