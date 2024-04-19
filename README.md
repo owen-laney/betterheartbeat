@@ -37,4 +37,4 @@
 - Example screenshots in this repo
 
 ## Install
-We aren't on the Chrome Web Store or Firefox Addons store yet, so please follow the [manual instructionshttps://github.com/owen-laney/betterheartbeat?tab=readme-ov-file#install-manually)
+We aren't on the Chrome Web Store or Firefox Addons store yet, so please follow the [manual instructions](https://github.com/owen-laney/betterheartbeat?tab=readme-ov-file#install-manually)
