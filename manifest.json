@@ -7,13 +7,20 @@
     
     "homepage_url": "https://owenlaney.com",
     
-    "permissions": ["activeTab"],
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
 
     "browser_action": {
       "default_title": "BetterHeartbeat",
       "default_popup": "popup/popup.html"
     },
 
+    "options_ui": {
+      "page": "settings/options.html",
+      "open_in_tab":true
+    },
     "content_scripts": [
       {
         "matches": ["*://*.heartbeat.chat/*"],

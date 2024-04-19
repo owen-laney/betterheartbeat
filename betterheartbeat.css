@@ -9,6 +9,11 @@ body {
     line-height: unset;
 }
 
+::selection {
+    background: #000000d3;
+    color: white;
+}
+
 .jLPXgI {
     width: inherit;
     border: none;
@@ -32,9 +37,15 @@ body {
 .sc-fwwElh > * > * > * > * > * > .lpenqU {
 }
 .sc-fwwElh > * > * > * > * > * > .lpenqU > p {
-    font-size: 1.5rem !important;
-    font-weight: normal;
+    font-size: 1rem !important;
+    color: #000000af;
 }
+.sc-fwwElh > * > * > * > * > * > .lpenqU > p:hover {
+    background: transparent;
+    cursor: default;
+    scale: 1;
+}
+
 
 .sc-fwwElh > * > * > * > * > * > * > * {
     border-radius: 1rem;
@@ -234,6 +245,7 @@ body {
 .sc-dJiZtA {
     width: min-content;
     padding: 0.8rem;
+    border-radius: 1rem;
 }
 .sc-dJiZtA:hover {
     background: #00000014;
@@ -253,6 +265,7 @@ body {
 .sc-dJiZtA:hover > * > svg > path {
     transition: all 0.1s;
     fill: #000000 !important;
+    
 
 }
 
@@ -896,9 +909,65 @@ body {
 }
 
 
+/* dropdown button in events page (has a title)*/
+.kKkvIM {
+    background: #ffffffcf;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 1rem;
+    box-shadow: inset 10px 10px 10px #00000003, inset -3px -3px 10px #ffffff46, 1px 1px 3px #00000006;
+    margin: 0rem 0.5rem 0rem 0rem !important;
+    transition: all 0.1s;
+}
+.kKkvIM:hover {
+    box-shadow: inset 10px 10px 10px #00000003, inset -3px -3px 10px #ffffff46, 1px 1px 5px #00000010;
+    transition: all 0.1s;
+}
+
+.bTlZZP {
+    box-shadow: none;
+    background: #00000018;
+    transition: all 0.1s;
+    border-radius: 1rem;
+    border: 1px solid #e0e0e0 !important;
+    outline: none;
+}
+
+/*dropdown menu in events page (switch between monthly and agenda view)*/
+.sc-jXbUNg {
+    box-shadow: inset 10px 10px 10px #00000005, inset -3px -3px 10px #ffffff31, 2px 2px 10px #0000000a;
+    background: #ffffffb6;
+    backdrop-filter: blur(30px);
+    border: 1px solid #d5d5d5;
+    transition: all 0.1s;
+    border-radius: 1rem;
+    width: inherit;
+    height: inherit;
+    padding: 0.5rem;
+
+}
+/*dropdown menu item in events page */
+.sc-jXbUNg > * > .lfcuiN {
+    border-radius: 0.75rem;
+    white-space:nowrap;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.sc-jXbUNg > * > .lfcuiN:hover {
+    background: #00000010;
+    box-shadow: inset -5px -5px 10px #00000003, inset 3px 3px 10px #ffffff40;
+    transition: all 0.1s;
+}
+
 /*wiki / resources page & users page*/
 .sc-bVHCgj {
     background: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.sc-bVHCgj > * {
+    width: 100%;
+    max-width: 800px;
 }
 
 .rbc-calendar > .sc-ktPPKK {
@@ -923,9 +992,66 @@ body {
     padding: 0px;
     border: none;
     background: none;
-    max-width: 800px;
+    max-width: 1200px;
 }
 
+/* monthly calendar */
+.rbc-month-view {
+    width: 100% !important;
+    max-width: 1200px;
+    display: block;
+    background: transparent;
+    box-shadow: none !important;
+    border-radius: 2rem !important;
+    position: relative;
+    padding: 0px !important;
+    border: 1px solid #d5d5d5 !important;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+
+.rbc-month-header {
+    margin-bottom: 0px !important;
+    background: none;
+}
+
+.rbc-month-header > * {
+    background: #00000009 !important;
+    margin: 0px !important;
+    box-shadow: none !important;
+    outline: 1px solid #d5d5d5;
+    border-radius: 0px !important;
+}
+
+.rbc-month-row {
+    margin-bottom: 0px !important;
+    flex-grow: 1;
+}
+
+.rbc-month-row > .rbc-row-bg > * {
+    background: none;
+    margin: 0px !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+    outline: 1px solid #d5d5d5;
+    flex-grow: 1;
+    
+}
+
+.rbc-current, .rbc-current > .rbc-button-link {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border-radius: 0px !important;
+}
+
+.rbc-date-cell {
+    margin: 0px !important;
+}
+
+.rbc-row-segment {
+    padding: 0px 0px 4px 0px !important;
+}
 
 /* past events button */
 .sc-aXZVg {
