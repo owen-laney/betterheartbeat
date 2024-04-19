@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "BetterHeartbeat",
+    "version": "0.1",
+  
+    "description": "Customize heartbeat's web interface",
+    
+    "homepage_url": "https://owenlaney.com",
+    
+    "permissions": ["activeTab"],
+
+    "browser_action": {
+      "default_title": "BetterHeartbeat",
+      "default_popup": "popup/popup.html"
+    },
+
+    "content_scripts": [
+      {
+        "matches": ["*://*.heartbeat.chat/*"],
+        "js": ["betterheartbeat.js"],
+        "css": ["betterheartbeat.css"],
+        "run_at": "document_start",
+        "all_frames": true,
+        "match_about_blank": true
+      }
+    ]
+  }
