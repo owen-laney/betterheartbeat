@@ -26,5 +26,5 @@
 4. Click on "This Firefox"
 5. Click "Load Temporary Add-on..."
 6. Navigate to the folder you extracted earlier and select manifest.json
-7. Go back to Heartbeat and reload!
-Easier installs and a Chrome version are coming soon! This version's mainly here for testing and development
+7. Go back to Heartbeat and reload!\
+★ Easier installs and a Chrome version are coming soon! This version's mainly here for testing and development
