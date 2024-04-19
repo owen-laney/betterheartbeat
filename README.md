@@ -19,12 +19,21 @@
 - Landing page
 - Example screenshots in repo
 
-### How to use
+### Manual installation
+**First**
 1. Click the green code button and select download zip
-2. Unzip the file that downloads
+2. Unzip the file that downloads\
+\
+**Chrome specific**
+3. Go to chrome://extensions in Chrome
+4. Click the developer mode toggle in the top right corner of the screen
+5. Click the "Load unpacked" button
+6. Select the folder you just extracted
+7. Visit (Heartbeat)[https://app.heartbeat.chat] and reload!\
+\
+**Firefox specific**
 3. Go to about:debugging in Firefox
 4. Click on "This Firefox"
 5. Click "Load Temporary Add-on..."
 6. Navigate to the folder you extracted earlier and select manifest.json
-7. Go back to Heartbeat and reload!\
-★ Easier installs and a Chrome version are coming soon! This version's mainly here for testing and development
+7. Open (Heartbeat)[https://app.heartbeat.chat] and reload!\
