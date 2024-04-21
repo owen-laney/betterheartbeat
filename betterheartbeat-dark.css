@@ -98,6 +98,12 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     border: none !important;
 }
 
+/* Add padding to the top of DMs */
+.jLPXgI > .jinlGs {
+    padding-top: 2rem;
+
+}
+
 /* Both left sidebars */
 /* This collapses on mobile */
 /* The user sidebar also collapses, but it's completely inzccessible on mobile */
@@ -219,7 +225,7 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     width: 100%;
     border: none;
     /*background: linear-gradient(180deg, #ff000000 0%, #0000005d 100%);*/
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(14px);
 }
 
 .cOEJGo {
@@ -238,21 +244,21 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     position: fixed;
 }
 
-.sc-bHnlcS > * > .bmrecX {
+.bmrecX {
     top: 0;
     right: 0;
 }
 
 /* Attachment & GIF buttons */
-.sc-bHnlcS > * > .bmrecX > button, .sc-bHnlcS > * > .bmrecX > * > button {
+.bmrecX > button, .sc-bHnlcS > * > .bmrecX > * > button {
     border-radius: 1rem;
     scale: 0.75;
 }
-.sc-bHnlcS > * > .bmrecX > button:hover, .sc-bHnlcS > * > .bmrecX > * > button:hover {
+.bmrecX > button:hover, .sc-bHnlcS > * > .bmrecX > * > button:hover {
     background: var(--secondary-background-hover);
     transition: var(--transition-1);
 }
-.sc-bHnlcS > * > .bmrecX > button:active, .sc-bHnlcS > * > .bmrecX > * > button:active {
+.bmrecX > button:active, .sc-bHnlcS > * > .bmrecX > * > button:active {
     scale: 0.70;
     transition: var(--transition-1);
 }
@@ -388,12 +394,26 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
 .ikxgxG > a > p {
     color: var(--fg-secondary);
 }
-.ikxgxG > * > button {
+.ikxgxG > * > button  {
     height: min-content;
     color: var(--fg-secondary);
 }
 .ikxgxG > * > button > p {
     color: var(--fg-secondary);
+}
+
+/* Number of group chat members */
+.ikxgxG > a > .xpKiZ > div > .hdKQZM {
+    background: transparent;
+    padding: 0;
+    font-weight: normal;
+    color: var(--fg-tertiary);
+}
+
+/* Create voice room button */
+.ikxgxG > button {
+    padding: 0.5rem;
+    height: unset;
 
 }
 
@@ -701,24 +721,6 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
 .sc-bWJUgm > .sc-lmUcrn > .sc-cPiKLX > button:active {
     scale: 0.9;
     transition: all 0.1s;
-}
-
-.sc-bWJUgm > .mt-2 > span > button {
-    background: #00000009;
-    transition: var(--transition-1);
-}
-
-.sc-bWJUgm > .mt-2 > span > button:hover {
-    background: #00000014;
-    transition: var(--transition-1);
-}
-
-.sc-bWJUgm > .mt-2 > span > .eyeOZH {
-    background: #000000;
-}
-
-.sc-bWJUgm > .mt-2 > span > .eyeOZH:hover {
-    background: #000000;
 }
 
 .hWcPiQ {
@@ -1292,10 +1294,10 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     align-items: start;
 }
 
-/* Calendar title, Account settings title, Notifications settings title, My groups title */
-.rbc-calendar > .sc-ktPPKK > .sc-cPiKLX > p, .sc-bVHCgj > .sc-ktPPKK > .sc-dAlyuH, .sc-dLMFU > .sc-cPiKLX > .sc-dAlyuH, .sc-ktPPKK > .sc-cPiKLX > .sc-dAlyuH {
+/* Calendar title, Account settings title, Notifications settings title, My groups title, Read only channel title */
+.rbc-calendar > .sc-ktPPKK > .sc-cPiKLX > p, .PttpO > .sc-bVHCgj > .sc-ktPPKK > .sc-dAlyuH, .sc-ktPPKK > * > .sc-dLMFU > .sc-cPiKLX > .sc-dAlyuH, .sc-bVHCgj > .sc-ktPPKK > .sc-cPiKLX > .sc-dAlyuH, .PttpO > .sc-bVHCgj > .sc-ktPPKK > .sc-dAlyuH > span {
     font-size: 2rem !important;
-    font-weight: normal;
+    font-weight: normal !important;
     color: var(--fg-primary);
 }
 /* Groups title alignment fix */
@@ -1404,6 +1406,23 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     background: var(--secondary-background-active);
 }
 
+/* Unselected buttons in RSVP view*/
+.sc-RYuTI > .iIFsNc > * > .cyOtYj {
+    color: var(--primary-button) !important;
+    fill: var(--primary-button) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+.sc-RYuTI > .iIFsNc > * > .cyOtYj:hover {
+    background: var(--secondary-background-hover) !important;
+    transition: var(--transition-1);
+}
+.sc-RYuTI > .iIFsNc > * > .cyOtYj:active {
+    background: var(--secondary-background-active);
+}
+.sc-RYuTI > .iIFsNc > * > .cyOtYj > svg >g > path {
+    fill: var(--primary-button) !important;
+}
 
 .sc-bVHCgj > .sc-ktPPKK > * > * > * > .sc-fUnMCh {
     border: none;
