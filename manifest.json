@@ -25,8 +25,8 @@
     "content_scripts": [
       {
         "matches": ["*://*.heartbeat.chat/*"],
-        "js": ["betterheartbeat.js"],
-        "css": ["betterheartbeat.css"],
+        "js": ["abetterheartbeat.js"],
+        "css": ["betterheartbeat-dark.css"],
         "run_at": "document_idle",
         "all_frames": true,
         "match_about_blank": true
