@@ -421,7 +421,7 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     background: transparent;
 }
 .cMRZRs > * > svg > path {
-    fill: #ffffff !important;
+    fill: var(--fg-primary) !important;
 }
 
 
@@ -499,11 +499,11 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
 .sc-fMMURN:hover, .sc-dJiZtA:hover, .sc-dJiZtA:hover > * > svg > path {
     background: var(--secondary-background-hover);
     transition: var(--transition-1);
-    fill: #ffffff !important;
+    fill: var(--fg-primary) !important;
 }
 .sc-fMMURN:active, .sc-dJiZtA:active, .sc-dJiZtA:active > * > svg > path {
     background: var(--secondary-background-active);
-    fill: #ffffff !important;
+    fill: var(--fg-primary) !important;
 }
 .sc-dJiZtA > * > svg {
     height: 1.6rem;
