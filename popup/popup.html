@@ -2,12 +2,69 @@
     <link rel="stylesheet" href="popup.css">
 </head>
 
-<div class="maincontainer">
-    <div class="togglecontainer">
-        <span>Custom style</span>
-        <label class="checkbox">
-            <input type="checkbox" id="customstyle">
-            <span class="checkmark"></span>
-        </label>
+<body>
+    <div class="maincontainer">
+
+        <div class="dark-mode-menu">
+            <div class="dark-mode-item selected">
+            <img src="font1.png" alt="Dark mode">
+            </div>
+            <div class="dark-mode-item">
+            <img src="font2.png" alt="Light mode">
+            </div>
+            <div class="dark-mode-item">
+            <img src="font3.png" alt="Follow system">
+            </div>
+        </div>
+
+        <div class="color-menu">
+            <div class="color-item red selected"></div>
+            <div class="color-item blue"></div>
+            <div class="color-item green"></div>
+            <div class="color-item pink"></div>
+            <div class="color-item purple"></div>
+            <div class="color-item yellow"></div>
+        </div>
+
+        <div class="togglecontainer">
+            <div class="labelscontainer">
+                <h3 class="toggletitle">Warm colors</h3>
+                <p class="toggledescription">Helps to reduce blue light</p>
+            </div>
+            <label class="checkbox">
+                <input type="checkbox" id="customstyle">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="font-menu">
+            <div class="font-item selected">
+            <img src="font1.png" alt="Sans-serif">
+            </div>
+            <div class="font-item">
+            <img src="font2.png" alt="Serif">
+            </div>
+            <div class="font-item">
+            <img src="font3.png" alt="Monospace">
+            </div>
+        </div>
+        <div class="togglecontainer">
+            <div class="labelscontainer">
+                <h3 class="toggletitle">Accent only</h3>
+                <p class="toggledescription">Only use custom fonts for headers</p>
+            </div>
+            <label class="checkbox">
+                <input type="checkbox" id="customstyle">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+
+        <div class="togglecontainer">
+            <div class="labelscontainer">
+                <p class="toggletitle">Thanks for using BetterHeartbeat!</p>
+                <a class="toggledescription" href="https://github.com/owen-laney/betterheartbeat">Contribute</a>
+                <a class="toggledescription" href="https://github.com/owen-laney/betterheartbeat/issues">Report an issue</a>
+            </div>
+        </div>
+
     </div>
-</div>
+</body>

@@ -1,7 +1,77 @@
 
+
+:root {
+    --main-text-color: #ffffff;
+    --secondary-text-color: #ffffffec;
+    --main-background: #2b2b2c;
+    --secondary-background: #313132;
+    --tertiary-background: #3b3b3b;
+    --quaternary-background: #4b4b4b;
+
+    --main-background-hover: #ffffff09;
+    --secondary-background-hover: #ffffff0d;
+    --tertiary-background-hover: #ffffff15;
+
+    --main-background-active: #ffffff14;
+    --secondary-background-active: #ffffff1a;
+    --tertiary-background-active: #ffffff1f;
+
+    --main-background-focus: #ffffff1f;
+    --secondary-background-focus: #ffffff2f;
+    --tertiary-background-focus: #ffffff35;
+
+    --main-translucent-background: #222222ce;
+    --secondary-translucent-background: #2e2e2ecf;
+    --tertiary-translucent-background: #2828283a;
+    --quaternary-translucent-background: #3a3a3a64;
+
+    --main-border: #474747;
+    --secondary-border: #5b5b5b9c;
+    --tertiary-border: #67676764;
+    --quaternary-border: #0a0a0a;
+
+    --primary-button: #2c98f8; /* Calls to action */
+    --secondary-button: #2A2A2A; /* Secondary actions */
+    --translucent-button: #ffffff00; /* Popups, dropdowns, & tabs */
+
+
+    --fg-primary: #ffffff;
+    --fg-secondary: #c6c6c6;
+    --fg-tertiary: #6e6e6e;
+
+    --shadow-1: 1px 1px 10px rgba(0, 0, 0, 0.351), 10px 10px 10px #00000009, inset -3px -3px 10px #ffffff1b;
+    --shadow-2: 1px 1px 10px rgba(0, 0, 0, 0.351), -10px -10px 10px #00000009, inset 3px 3px 10px #ffffff1b;
+    /* Subtler versions of 1 & 2 */
+    --shadow-3: 1px 1px 10px rgba(0, 0, 0, 0.242), 10px 10px 5px #00000009, inset -3px -3px 5px #ffffff0b;
+    --shadow-4: 1px 1px 10px rgba(0, 0, 0, 0.242), -10px -10px 5px #00000009, inset 3px 3px 5px #ffffff0b;
+
+
+    --corner-sm: 0.25rem;
+    --corner-md: 0.5rem;
+    --corner-lg: 1rem;
+    --corner-full: 9999px;
+
+    --transition-1: all 0ms;
+
+    --text-size-sm: 0.9rem; /* Section headers */
+    --text-size-md: 1rem; /* Most text within the app */
+    --text-size-lg: 1.2rem;
+    --text-size-header: 2rem;
+
+}
+
 * {
-    color: green;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--main-text-color);
+}
+
+body {
+    background: var(--main-background);
+    margin: 0;
+    width: 300px;
+    padding: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .maincontainer {
@@ -9,11 +79,167 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    height: 100%;
 }
 
 .togglecontainer {
     display: flex;
     flex-direction: row;
     justify-items: space-between;
+    width: inherit;
+    background: var(--secondary-background);
+    border: 1px solid var(--secondary-border);
+    border-radius: var(--corner-md);
+    padding: 0.5rem;
+    justify-content: space-between;
+}
+
+.toggletitle {
+    font-weight: normal;
+    font-size: var(--text-size-md);
+    color: var(--fg-primary);
+    margin: 0rem;
+    margin-bottom: 0.25rem;
+}
+
+.toggledescription {
+    color: var(--fg-secondary);
+    font-size: var(--text-size-sm);
+    margin: 0;
+}
+
+.togglecontainer > .checkbox {
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.togglecontainer > .checkbox > input[type=checkbox] {
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--primary-button);
+}
+
+/* Font picker */
+.font-menu {
+    display: flex;
+    flex-direction: row;
+    justify-items: space-between;
+    width: inherit;
+    background: var(--secondary-background);
+    border: 1px solid var(--secondary-border);
+    border-radius: var(--corner-md);
+    padding: 0.5rem;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.font-item {
+    aspect-ratio : 1 / 1;
     width: 100%;
+    cursor: pointer;
+    transition: all 0.1s;
+    border-radius: var(--corner-md);
+}
+
+.font-item:hover {
+    background-color: var(--secondary-background-hover);
+    outline: 2px solid #ffffff86;
+}
+
+.font-item.selected {
+    background: var(--secondary-background-focus);
+    border: 1px solid var(--secondary-border);
+    outline: 2px solid #ffffffc9;
+}
+
+/* Dark mode picker */
+.dark-mode-menu {
+    display: flex;
+    flex-direction: row;
+    justify-items: space-between;
+    width: inherit;
+    background: var(--secondary-background);
+    border: 1px solid var(--secondary-border);
+    border-radius: var(--corner-md);
+    padding: 0.5rem;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.dark-mode-item {
+    aspect-ratio : 1 / 1;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.1s;
+    border-radius: var(--corner-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-mode-item:hover {
+    background-color: var(--secondary-background-hover);
+    outline: 2px solid #ffffff86;
+}
+
+.dark-mode-item.selected {
+    background: var(--secondary-background-focus);
+    border: 1px solid var(--secondary-border);
+    outline: 2px solid #ffffffc9;
+}
+
+
+
+/* Color picker */
+.color-menu {
+    display: flex;
+    flex-direction: row;
+    justify-items: space-between;
+    width: inherit;
+    background: var(--secondary-background);
+    border: 1px solid var(--secondary-border);
+    border-radius: var(--corner-md);
+    padding: 0.5rem;
+    justify-content: space-between;
+}
+
+.color-item {
+    aspect-ratio : 1 / 1;
+    width: 100%;
+    margin: 0.25rem;
+    cursor: pointer;
+    transition: all 0.1s;
+    border-radius: var(--corner-full);
+    border: 1px solid var(--secondary-border);
+}
+
+.color-item:hover {
+    outline: 2px solid #ffffff86;
+}
+
+.color-item.selected {
+    outline: 2px solid #ffffffc9;
+}
+
+.red {
+    background-color: #FF9770;
+}
+.blue {
+    background-color: #70D6FF;
+}
+.green {
+    background-color: #81d567;
+}
+.pink {
+    background-color: #fa659e;
+}
+.purple {
+    background-color: #e26cf1;
+}
+.yellow {
+    background-color: #FFD670;
 }
