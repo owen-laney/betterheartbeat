@@ -82,6 +82,10 @@ span, .iGdcti {
     color: var(--fg-primary);
 }
 
+h1 {
+    color: var(--fg-primary);
+}
+
 /* Settings catrgory headers */
 form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX > * > * > .sc-dAlyuH {
     color: var(--fg-tertiary);
@@ -120,7 +124,8 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     padding: 0px;
     background: var(--secondary-background);
     border-left: 1px solid var(--quaternary-border);
-    padding-left: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 
 }
 .sc-fwwElh > .pl-0 {
@@ -213,7 +218,8 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     bottom: 0;
     width: 100%;
     border: none;
-    background: linear-gradient(180deg, #ff000000 0%, #0000005d 100%);
+    /*background: linear-gradient(180deg, #ff000000 0%, #0000005d 100%);*/
+    backdrop-filter: blur(10px);
 }
 
 .cOEJGo {
@@ -587,6 +593,7 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
 
 .sc-dUOoGL > .clODPz:hover {
     text-decoration: none;
+    color: var(--fg-secondary);
 
 }
 
@@ -831,8 +838,10 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
 
 .ql-editor > p {
     font-size: var(--text-size-md) !important;
+    color: var(--fg-primary);
+    font-weight: normal;
+    line-height: unset !important;
 }
-
 
 .quill {
     background: transparent;
@@ -935,7 +944,6 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     margin: 0rem 0.5rem 0rem 0rem !important;
     transition: var(--transition-1);
     display: flex;
-    height: 10px !important;
 }
 
 
@@ -1038,6 +1046,15 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     background: var(--secondary-button);
 }
 
+/* Selected reaction */
+.eyeOZH {
+    background: var(--primary-button);
+    border: 1px solid var(--tertiary-border);
+    border-radius: var(--corner-md);
+    box-shadow: var(--shadow-3);
+
+}
+
 /* Username */
 .clODPz {
     font-weight: normal;
@@ -1097,12 +1114,20 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     height: unset;
 }
 
+/* Top page title */
+.kyYSUu {
+    color: var(--fg-primary);
+    font-size: var(--text-size-lg);
+    line-height: 1;
+    height: unset
+}
+
 /* Top searchbar */
 .ktNBiY {
     background: var(--quaternary-background);
     backdrop-filter: blur(30px);
     border: 1px solid var(--secondary-border) !important;
-    border-radius: 9999px !important;
+    border-radius: var(--corner-md) !important;
     transition: var(--transition-1);
     width: 100%;
     padding: 0.25rem;
@@ -1110,7 +1135,7 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
 }
 
 /* Dropdown menu, Switch server dropdown Agenda switch dropdown item*/
-.gcWACU, .gxjtMH, .sc-jXbUNg {
+.gcWACU, .gxjtMH, .sc-jXbUNg, .select-search__select {
     background: var(--tertiary-translucent-background);
     backdrop-filter: blur(30px);
     border: 1px solid var(--tertiary-border);
@@ -1129,14 +1154,15 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     top: 0.5rem;
 }
 
-/* Dropdown item, Server switch dropdown item, Agenda switch dropdown item*/
-.kFSSHK, .gxjtMH > .hYPlyw, .sc-jXbUNg > * > .lfcuiN {
+/* Dropdown item, Server switch dropdown item, Agenda switch dropdown item, Channel override item*/
+.kFSSHK, .gxjtMH > .hYPlyw, .sc-jXbUNg > * > .lfcuiN, .select-search__select > * > * .select-search__option {
     border-radius: 0.75rem;
     white-space:nowrap;
     padding-left: 1rem;
     padding-right: 1rem;
     border-radius: var(--corner-md);
     color: var(--main-text-color);
+    background: transparent;
 
 }
 /* Fixes for server switch dropdown item */
@@ -1144,13 +1170,13 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     color: var(--main-text-color);
 
 }
-.kFSSHK:hover, .sc-jXbUNg > * > .lfcuiN:hover {
+.kFSSHK:hover, .sc-jXbUNg > * > .lfcuiN:hover, .select-search__select > * > * .select-search__option:hover {
     background: var(--tertiary-background-hover);
     box-shadow: none;
     transition: var(--transition-1);
     color: var(--main-text-color);
 }
-.kFSSHK:active, .sc-jXbUNg > * > .lfcuiN:active {
+.kFSSHK:active, .sc-jXbUNg > * > .lfcuiN:active, .select-search__select > * > * .select-search__option:active {
     background: var(--tertiary-background-active);
 }
 
@@ -1184,8 +1210,8 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     background: var(--tertiary-background-focus);
 }
 
-/* dropdown button in events page (has a title)*/
-.kKkvIM {
+/* dropdown button in events page (has a title), Notifications channel overrides*/
+.kKkvIM, .select-search__input {
     background: var(--secondary-background);
     border: 1px solid var(--secondary-border) !important;
     border-radius: var(--corner-md);
@@ -1193,7 +1219,7 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     transition: var(--transition-1);
     box-shadow: var(--shadow-3);
 }
-.kKkvIM:hover {
+.kKkvIM:hover, .select-search__input:hover {
     box-shadow: var(--shadow-3);
     transition: var(--transition-1);
 }
@@ -1215,18 +1241,41 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     align-items: center;
 }
 
+
 .sc-bVHCgj > .sc-ktPPKK > .sc-nZgfj {
+    flex-direction: column;
+    align-items: start;
+
+}
+/* Settings cards */
+.sc-bVHCgj > .sc-ktPPKK > .sc-nZgfj > .sc-euWMRQ {
     background: var(--secondary-background);
     display: flex;
     align-items: center;
     border-radius: var(--corner-lg);
     border: 1px solid var(--secondary-border);
     margin-bottom: 1rem;
-
+    padding: 1rem;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
 }
 
-.sc-bVHCgj > * {
-    width: 100%;
+.sc-bVHCgj > .sc-ktPPKK > .sc-nZgfj > * > p {
+    font-size: var(--text-size-sm) !important;
+    font-weight: normal;
+    color: var(--fg-tertiary);
+    margin-bottom: 0.5rem;
+}
+.sc-bVHCgj > .sc-ktPPKK > .sc-nZgfj > * {
+    height: unset;
+}
+
+
+.rbc-calendar {
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
 
 .rbc-calendar > .sc-ktPPKK {
@@ -1243,11 +1292,16 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     align-items: start;
 }
 
-/* Calendar title */
-.rbc-calendar > .sc-ktPPKK > .sc-cPiKLX > p {
+/* Calendar title, Account settings title, Notifications settings title, My groups title */
+.rbc-calendar > .sc-ktPPKK > .sc-cPiKLX > p, .sc-bVHCgj > .sc-ktPPKK > .sc-dAlyuH, .sc-dLMFU > .sc-cPiKLX > .sc-dAlyuH, .sc-ktPPKK > .sc-cPiKLX > .sc-dAlyuH {
     font-size: 2rem !important;
     font-weight: normal;
     color: var(--fg-primary);
+}
+/* Groups title alignment fix */
+.dbBQVw {
+    justify-content: unset;
+
 }
 
 .sc-bVHCgj > .sc-ktPPKK {
@@ -1255,6 +1309,24 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     border: none;
     background: none;
     max-width: 1200px;
+}
+
+/* Group card */
+.sc-ktPPKK > .sc-fUnMCh {
+    background: var(--secondary-background);
+    border: 1px solid var(--secondary-border);
+    border-radius: var(--corner-lg);
+    padding: 1rem;
+    margin: 1rem;
+    transition: var(--transition-1);
+    box-shadow: none !important;
+    width: 100%;
+    margin: 0px;
+}
+
+/* Settings sidbear */
+.sc-btwKTd {
+    padding-right: 0.5rem;
 }
 
 /* monthly calendar */
@@ -1361,13 +1433,8 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
     margin: 0.2rem;
 }
 
-/* Align user directory search & filter buttons */
-.sc-cPiKLX > .mr-3 > . {
-
-}
-
 .rbc-agenda-view {
-    width: inherit !important;
+    width: 100% !important;
     max-width: 800px;
     display: block;
     box-shadow: none !important;
@@ -1433,4 +1500,13 @@ form > .sc-dLMFU > * > .sc-dAlyuH, .sc-cPiKLX > .flex-1 > .sc-dAlyuH, .sc-cPiKLX
 
 .sc-bVHCgj > * > .sc-eTTeRg > .sc-dLMFU {
     padding: 0 !important;
+}
+
+/* Remove white background from document */
+.cATmQh {
+    background: var(--main-background);
+}
+.cATmQh .heading-actions {
+    background: var(--main-background-hover);
+    padding: 0.25rem;
 }
